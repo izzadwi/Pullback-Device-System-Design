@@ -8,3 +8,9 @@ The first step in designing the system is to determine the Arduino pins that wil
 
 ### <br/> Flowchart of the system
 The system flowchart can be found in the **Flowchart_System.md** file. This flowchart provides an overview of how the system works.
+
+### <br/> Schematic Design 
+The schematic design is created after **Arduino_Pins.md** file was done to determine how the hardware will connect as state in the **Arduino_Pins.md** file
+
+### <br/> PCB Bord
+PCB bord, make a PCB bord from the schematic design.
