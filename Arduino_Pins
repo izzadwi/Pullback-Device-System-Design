@@ -1,4 +1,4 @@
-Connection between Arduino pins and sensor/actuator pins
+# Connection between Arduino pins and sensor/actuator pins
 
 1. Analog Joystick Module:
    - VCC pin is connected to the 5V pin on Arduino.
