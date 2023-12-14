@@ -1,2 +1,5 @@
-flowchart TD
+'''mermaid
+flowchart TD;
  Start --> Stop
+
+'''
