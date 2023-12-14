@@ -1,17 +1,18 @@
-sequenceDiagram
-  participant User
-  participant Device
-
-  User ->> Device: Power on
-  Device ->> User: Device initialized
-  Device ->> User: Display main menu
-
-  User ->> Device: Select "Move fiber"
-  Device ->> User: Control stepper motor with joystick
-  Device ->> User: Update fiber position on OLED display
-
-  User ->> Device: Select "Change settings"
-  Device ->> User: Adjust device settings through menu options
-
-  User ->> Device: Select "Exit"
-  Device ->> User: Turn off device
+graph TD
+ Start
+ IsPowerConnected{Is power connected?}
+ Start --> IsPowerConnected
+ IsPowerConnectedYes --> InitializeDevice
+ InitializeDevice --> DisplayMainMenu
+ IsPowerConnectedNo --> ConnectPowerOrReplaceBattery
+ ConnectPowerOrReplaceBattery --> Start
+ DisplayMainMenu
+ SelectOptionFromMainMenu{Select option from main menu}
+ DisplayMainMenu --> SelectOptionFromMainMenu
+ SelectOptionFromMainMenuMoveFiber --> ControlStepperMotorWithJoystick
+ ControlStepperMotorWithJoystick --> UpdateFiberPositionOnOLEDDisplay
+ SelectOptionFromMainMenuChangeSettings --> AdjustDeviceSettingsThroughMenuOptions
+ SelectOptionFromMainMenuExit --> TurnOffDevice
+ TurnOffDevice --> Start
+ End
+ TurnOffDevice --> End
